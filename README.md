@@ -7,6 +7,7 @@ whats the domain
 what are the phosphorylations
 if theres regs/ active sites
 
+if you do not want to map PDB, you can use the 00.full_alignment.py script, it requires the same files.
 
 required files:
 alignment.ali
@@ -52,5 +53,7 @@ A3A2W5_8678     13    304     13    304 PF00069.24  Pkinase           Domain    
 what variables to edit in 00.run_phosps_hotspots.py:
 240 how_many_permuts=100####################HOW MANY PERMUTS (100 is the usual, but can be more or less)
 229 pdb_name="PF00001_6fk7_A_55_306+55"##############thats the name that appears in alignment.ali + its start (thats how the columns named)
+treshold and fore_val - pvalue threshold and foreground value that will allow hotspot (only in phosp_hotspots)
+
 
 
