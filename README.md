@@ -1,13 +1,13 @@
 # phosp_hotspots
+running the scripts requires previous alignment of protein domains sequences - I cut out the domains out of proteins and put the number of the start of the domain in fasta header. It is possible to use full protein alignment, but I have no idea how well that works.
+depending on alignment, two 00. scripts are available. If the pdb is known, 00.phosp_hotspots.py should be used, with the variable pdb_name+domain_start updated in script as in pdb_name;start in alignment.
+if you do not want to map PDB, you can use the 00.full_alignment.py script, it requires the same files.
 
 required knowledge:
 alignment with domains cut out out of proteins
 what pdb to map to (its sequence has to be in alignment)- its name and start of the domain
-whats the domain
-what are the phosphorylations
+where are the phosphorylations
 if theres regs/ active sites
-
-if you do not want to map PDB, you can use the 00.full_alignment.py script, it requires the same files.
 
 required files:
 alignment.ali
@@ -48,12 +48,12 @@ its the output of pfam_scan.pl, with the list of prediceted active sites at the 
  A2ZVI7_8293     66    324     66    324 PF00069.24  Pkinase           Domain     1   264   264    245.8   4.3e-73   1 CL0016   predicted_active_site 211,189  
 A3A2W5_8676     13    304     13    304 PF00069.24  Pkinase           Domain     1   264   264    227.6   1.6e-67   1 CL0016   predicted_active_site 157,138  
 A3A2W5_8678     13    304     13    304 PF00069.24  Pkinase           Domain     1   264   264    227.6   1.6e-67   1 CL0016   predicted_active_site 157,138  
-
+if the active sites are any different the "active_dataframe" requires updating
 
 what variables to edit in 00.run_phosps_hotspots.py:
 240 how_many_permuts=100####################HOW MANY PERMUTS (100 is the usual, but can be more or less)
 229 pdb_name="PF00001_6fk7_A_55_306+55"##############thats the name that appears in alignment.ali + its start (thats how the columns named)
-treshold and fore_val - pvalue threshold and foreground value that will allow hotspot (only in phosp_hotspots)
+treshold and fore_val - pvalue threshold and foreground value that will allow hotspot (only in 00.phosp_hotspots)
 
 
 
