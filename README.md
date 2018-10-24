@@ -33,6 +33,21 @@ SPECIES/ANIMALS/Celegans.phosp_output:Celegans, B0545.1a, 534, T, PF00069.24, 37
 SPECIES/ANIMALS/Celegans.phosp_output:Celegans, B0545.1a, 538, T, PF00069.24, 375, 628, Pkinase
 If this is not the case, correct line annotations are required in "phos_dataframe" fucntion
 
+how to prepare regulatory
+S, 742, P33981,
+T, 312, P80192, 
+T, 170, O00444, 
+Y, 221, Q13164,
+T, 260, Q8IWQ3,
+T, 472, O00311,
+is enough
+
+how to prepare active
+its the output of pfam_scan.pl, with the list of prediceted active sites at the end of line so: 
+ A2ZVI7_8293     66    324     66    324 PF00069.24  Pkinase           Domain     1   264   264    245.8   4.3e-73   1 CL0016   predicted_active_site 211,189  
+A3A2W5_8676     13    304     13    304 PF00069.24  Pkinase           Domain     1   264   264    227.6   1.6e-67   1 CL0016   predicted_active_site 157,138  
+A3A2W5_8678     13    304     13    304 PF00069.24  Pkinase           Domain     1   264   264    227.6   1.6e-67   1 CL0016   predicted_active_site 157,138  
+
 
 what variables to edit in 00.run_phosps_hotspots.py:
 240 how_many_permuts=100####################HOW MANY PERMUTS (100 is the usual, but can be more or less)
