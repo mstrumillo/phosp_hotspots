@@ -41,9 +41,9 @@ ax2 = ax1.twinx()
 ax2.plot(x, y2, '#0066CC','-')
 ax2.set_ylabel("-log(pvalue)", fontsize=12)
 
-hotspots=pval_each.index[pval_each['hotspot_plus'] >= 1].tolist()
-for i in hotspots:
-	ax1.axvspan(i-0.5, i+0.5, alpha=0.5, color='yellow')
+hotspots=pval_each.index[pval_each['hotspot_plus'] >= 1].tolist() #####comment out these 3 lines if using full ali
+for i in hotspots:					###############comment out these 3 lines if using full ali
+	ax1.axvspan(i-0.5, i+0.5, alpha=0.5, color='yellow')	#######comment out these 3 lines if using full ali
 
 
 plt.show()
