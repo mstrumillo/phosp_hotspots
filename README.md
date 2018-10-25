@@ -41,7 +41,7 @@ T, 170, O00444,
 Y, 221, Q13164,
 T, 260, Q8IWQ3,
 T, 472, O00311,
-is enough
+is enough 
 
 how to prepare active
 its the output of pfam_scan.pl, with the list of prediceted active sites at the end of line so: 
