@@ -27,7 +27,7 @@ its an alignment in ONE LINE fasta format, (https://www.biostars.org/p/9262/) wi
 
 domain_start is necessary for correct phosphorylations assignment
 eg
-
+"
 >FBpp0270092 pep:known chromosome:GCA_00 ;196;492
 
 --------Y-EILEV----------------------------IGKG------
@@ -35,6 +35,7 @@ eg
 >NONE_15409 , MEDTR2G085200.1 ;134;418
 
 --------F-EKLDK----------------------------IGQG------
+"
 
 # how to prepare all_phosps
 phospho file has to contain the protein id and the position, however script is set up to recognise pfam_scan.pl output which looks like this: 
