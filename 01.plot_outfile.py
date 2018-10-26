@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 
-pval_each=pd.read_csv("pdb_pval")
+pval_each=pd.read_csv("pval_pdb")
 
 pval_each['pvals']=pval_each['pvals']+0.0000000000000000001
 pval_each['logar']=-np.log10(pval_each.pvals)
