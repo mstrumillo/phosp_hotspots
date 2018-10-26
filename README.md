@@ -22,12 +22,18 @@ active_sites------these two can be empty, but have to exist
 
 # how to prepare alignment.ali (example for PF00022 uploaded
 its an alignment in ONE LINE fasta format, (https://www.biostars.org/p/9262/) with headers like 
+
 >id; int domain_start; int domain_end
+
 domain_start is necessary for correct phosphorylations assignment
 eg
+
 >FBpp0270092 pep:known chromosome:GCA_00 ;196;492
+
 --------Y-EILEV----------------------------IGKG------
+
 >NONE_15409 , MEDTR2G085200.1 ;134;418
+
 --------F-EKLDK----------------------------IGQG------
 
 # how to prepare all_phosps
