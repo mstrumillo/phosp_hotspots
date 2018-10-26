@@ -1,21 +1,26 @@
 # phosp_hotspots
 running the scripts requires previous alignment of protein domains sequences - I cut out the domains out of proteins and put the number of the start of the domain in fasta header. It is possible to use full protein alignment, but I have no idea how well that works.
-depending on alignment, two 00. scripts are available. If the pdb is known, 00.phosp_hotspots.py should be used, with the variable pdb_name+domain_start updated in script as in pdb_name;start in alignment.
+
+
+Depending on alignment, two 00. scripts are available. If the pdb is known, 00.phosp_hotspots.py should be used, with the variable pdb_name+domain_start updated in script as in pdb_name;start in alignment.
 if you do not want to map PDB, you can use the 00.full_alignment.py script, it requires the same files.
 
-required knowledge:
+#required knowledge:
+
 alignment with domains cut out out of proteins
 what pdb to map to (its sequence has to be in alignment)- its name and start of the domain
 where are the phosphorylations
 if theres regs/ active sites
 
-required files:
+#required files:
+
 alignment.ali
 all_phosps
 regulatory -------these two can be empty, but have to exist
 active_sites------these two can be empty, but have to exist
 
-how to prepare alignment.ali
+
+#how to prepare alignment.ali (example for PF00022 uploaded
 its an alignment in ONE LINE fasta format, (https://www.biostars.org/p/9262/) with headers like 
 >id; int domain_start; int domain_end
 domain_start is necessary for correct phosphorylations assignment
