@@ -226,7 +226,7 @@ def active_dataframe(letter_alignment, position_alignment, column_names, indexes
 
 ###########script calling starts here
 #########these are the 3 starting dataframes
-pdb_name="PF00001_6fk7_A_55_306+55"##############thats the name that appears in alignment.ali + its start (thats how the columns named)
+pdb_name="PF00022_3dxm_B_154_349+154"##############thats the name that appears in alignment.ali + its start (thats how the columns named)
 (column_names, indexes)=prepare_cols_indx("alignment.ali")
 letter_alignment=letter_ali_dataframe("alignment.ali", column_names, indexes)
 position_alignment=pos_dataframe(letter_alignment, column_names, indexes)
