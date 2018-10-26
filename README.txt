@@ -62,10 +62,10 @@ if the active sites are any different the "active_dataframe" requires updating
 
 # what variables to edit in 00.run_phosps_hotspots.py:
 240 how_many_permuts=100####################HOW MANY PERMUTS (100 is the usual, but can be more or less)
-229 pdb_name="PF00001_6fk7_A_55_306+55"##############thats the name that appears in alignment.ali + its start (thats how the columns named)
-treshold and fore_val - pvalue threshold and foreground value that will allow hotspot (only in 00.phosp_hotspots)
+229 pdb_name="PF00001_6fk7_A_55_306+55"##############thats the name that appears in alignment.ali + its start (thats how the columns named) (only in 00.phosp_hotspots.py)
+treshold and fore_val - pvalue threshold and foreground value that will allow hotspot (only in 00.phosp_hotspots.py)
 
 # usage
-run 00. script in the same folder as the alignment.ali, all_phosp, regulatory and active_sites. The output will be, depending on version of 00. either pval_pdb or pval_full_seq. Change input in 01. to plot.
+run 00. script in the same folder as the alignment.ali, all_phosp, regulatory and active_sites. The output will be, depending on version of 00. either pval_pdb or pval_full_ali. Change input in 01. to plot.
 
 
