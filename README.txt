@@ -1,6 +1,6 @@
 # phosp_hotspots
+scripts 00.* produce output files that can be plotted using 01.
 running the scripts requires previous alignment of protein domains sequences - I cut out the domains out of proteins and put the number of the start of the domain in fasta header. It is possible to use full protein alignment, but I have no idea how well that works.
-
 
 Depending on alignment, two 00. scripts are available. If the pdb is known, 00.phosp_hotspots.py should be used, with the variable pdb_name+domain_start updated in script as in pdb_name;start in alignment.
 if you do not want to map PDB, you can use the 00.full_alignment.py script, it requires the same files.
@@ -20,22 +20,19 @@ regulatory -------these two can be empty, but have to exist
 active_sites------these two can be empty, but have to exist
 
 
-# how to prepare alignment.ali (example for PF00022 uploaded
+# how to prepare alignment.ali (example for PF00022 uploaded)
 its an alignment in ONE LINE fasta format, (https://www.biostars.org/p/9262/) with headers like 
 
 >id; int domain_start; int domain_end
 
 domain_start is necessary for correct phosphorylations assignment
 eg
-"
+
 >FBpp0270092 pep:known chromosome:GCA_00 ;196;492
-
 --------Y-EILEV----------------------------IGKG------
-
 >NONE_15409 , MEDTR2G085200.1 ;134;418
-
 --------F-EKLDK----------------------------IGQG------
-"
+
 
 # how to prepare all_phosps
 phospho file has to contain the protein id and the position, however script is set up to recognise pfam_scan.pl output which looks like this: 
@@ -68,5 +65,7 @@ if the active sites are any different the "active_dataframe" requires updating
 229 pdb_name="PF00001_6fk7_A_55_306+55"##############thats the name that appears in alignment.ali + its start (thats how the columns named)
 treshold and fore_val - pvalue threshold and foreground value that will allow hotspot (only in 00.phosp_hotspots)
 
+# usage
+run 00. script in the same folder as the alignment.ali, all_phosp, regulatory and active_sites. The output will be, depending on version of 00. either pval_pdb or pval_full_seq. Change input in 01. to plot.
 
 
